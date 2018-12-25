@@ -107,6 +107,9 @@ java -jar eureka_cluster-0.1.jar --spring.profiles.active=peer4
 ## 其它方案
 也可以采用DNS方案，将多个服务映射到同一个域名地址和固定端口；
 
-这种方案的好处是客户端配置可以固定，比如固定为：http://my-eureka-cluster.xx.com:7001/eureka，而不需要知道具体有多少台服务节点，而且服务节点的增减可以透明控制；
+这种方案的好处是客户端配置可以固定，比如固定为：[http://my-eureka-cluster.xx.com:7001/eureka](http://my-eureka-cluster.xx.com:7001/eureka)，而不需要知道具体有多少台服务节点，而且服务节点的增减可以透明控制；
 
 而且，服务节点之间也通过域名交互，新增一个节点时，只需要增加域名映射，而不需要重新配置已有的服务节点；
+
+
+刚才突然发现已经有一篇文章介绍DNS集群了，可以参考：[https://blog.csainty.com/2016/09/bootstrap-eureka-with-dns.html](https://blog.csainty.com/2016/09/bootstrap-eureka-with-dns.html)
