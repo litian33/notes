@@ -1,0 +1,24 @@
+es:
+  server:
+    hosts:
+      - host: server1:port1
+      - host: server2:port2
+  client:
+    selector: SKIP_DEDICATED_MASTERS
+    proxy: proxyServer:port
+    threadCount: 2
+    auth:
+      basic:
+        user: user1
+        passwd: pass
+    keyStore:
+      type: jks
+      path: dirxxx
+  request:
+    headers:
+      -header:
+        key: basicHeaderKey
+        value: basicHeaderValue
+    maxRetryTimeout: 30000
+    socketTimeout: 30000
+    connectTimeout: 5000
